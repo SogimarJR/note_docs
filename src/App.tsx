@@ -1,5 +1,5 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 import { Auth } from "./Auth";
 import { ThemeProvider } from "./Theme";
@@ -10,14 +10,14 @@ export const App = () => {
   return (
     <ChakraProvider>
       <Auth>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route path="/" element={<ThemeProvider />}>
               <Route index element={<Home />} />
               <Route path="/:id" element={<TextEditor />} />
             </Route>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </Auth>
     </ChakraProvider>
   );
