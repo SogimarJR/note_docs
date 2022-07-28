@@ -66,7 +66,7 @@ export const Home = () => {
     setDocs([...docs, newDoc]);
 
     const a = document.createElement("a");
-    a.href = `/${id}?documentName=${documentName}&lastUpdate=${newDoc.updatedAt}`;
+    a.href = `/#/${id}?documentName=${documentName}&lastUpdate=${newDoc.updatedAt}`;
     a.target = "_blank";
     a.click();
     a.remove();
