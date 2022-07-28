@@ -14,7 +14,7 @@ export const App = () => {
           <Routes>
             <Route path="/" element={<ThemeProvider />}>
               <Route index element={<Home />} />
-              <Route path="/#/:id" element={<TextEditor />} />
+              <Route path="/:id" element={<TextEditor />} />
             </Route>
           </Routes>
         </HashRouter>
