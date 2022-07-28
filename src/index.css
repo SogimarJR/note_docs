@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  background-color: #F7F8F9 !important;
+}
+
+@media print {
+  body {
+    background-color: #FFF !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  #printable,
+  #printable * {
+    visibility: visible;
+  }
+
+  #printable {
+    box-shadow: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+
+  .printable-hidden {
+    display: none !important;
+  }
+}
